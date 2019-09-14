@@ -11,14 +11,14 @@ collections:
     files:
       - label: "Contact Page"
         name: "contact"
-        file: "data/pages/contact.yml"
+        file: "src/data/pages/contact.yml"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
           - {label: Image, name: image, widget: image}
-  - name: "data/posts"
+  - name: "posts"
     label: "Posts"
-    folder: "posts"
+    folder: "src/data/posts"
     create: true
     slug: "{{slug}}"
     fields:
