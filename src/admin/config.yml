@@ -11,12 +11,12 @@ collections:
     files:
       - label: "Contact Page"
         name: "contact"
-        file: "contact.yml"
+        file: "data/pages/contact.yml"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
           - {label: Image, name: image, widget: image}
-  - name: "posts"
+  - name: "data/posts"
     label: "Posts"
     folder: "posts"
     create: true
