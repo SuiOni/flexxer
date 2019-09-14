@@ -15,15 +15,47 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
-          - {label: Image, name: image, widget: image}
-  - name: "posts"
-    label: "Posts"
+          - {label: Image, name: cover_image, widget: image}
+  - name: "motion"
+    label: "Motion Post"
     folder: "src/data/posts"
     create: true
     slug: "{{slug}}"
+    filter: {field: type, value: motion}
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "date"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Type", name: "type", widget: "select", options: ["motion", "installation", "still"]}
+      - {label: Title, name: title, widget: string}
+      - {label: "Post Image", name: cover_image, widget: image}
+      - {label: Excerpt, name: excerpt, widget: string}
+      - {label: "Publish Date", name: date, widget: date}
+      - {label: Body, name: body, widget: markdown}
+      - {label: "Vimeo Id", name: vimeo, widget: string}
+      - {label: Type, name: type, widget: select, options: [motion, installation, still]}
+  - name: "still"
+    label: "Still Post"
+    folder: "src/data/posts"
+    create: true
+    slug: "{{slug}}"
+    filter: {field: type", value: still}
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: "Post Image", name: cover_image, widget: image}
+      - {label: Excerpt, name: excerpt, widget: string}
+      - {label: "Publish Date", name: date, widget: date}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Type, name: type, widget: select, options: [motion, installation, still]}
+  - name: "installation"
+    label: "Installation Post"
+    folder: "src/data/posts"
+    create: true
+    slug: "{{slug}}"
+    filter: {field: type", value: installation}
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: "Post Image", name: cover_image, widget: image}
+      - {label: Excerpt, name: excerpt, widget: string}
+      - {label: "Publish Date", name: date, widget: date}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Type, name: type, widget: select, options: [motion, installation, still]}
+
+
+

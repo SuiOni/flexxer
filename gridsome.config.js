@@ -24,7 +24,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'posts/**/*.md',
+        path: 'data/posts/**/*.md',
         typeName: 'Post',
         remark: {
           plugins: [
@@ -34,10 +34,25 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'data/pages/contact.yml',
+        typeName: 'Contact',
+      }
+    },
+    {
       use: `gridsome-plugin-netlify-cms`,
       options: {
         publicPath: `/admin`
       }
     },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: { 
+        contentTypes: ['Post', 'Contact'],
+        coverField: 'cover_image'
+      }
+      
+    }
   ]
 }
